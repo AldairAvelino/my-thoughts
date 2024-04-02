@@ -12,21 +12,21 @@ import { CommonModule } from '@angular/common';
 })
 export class ListarPensamentoComponent {
   listaPensamento = [
-    {
-      conteudo: 'Conteudo 1',
-      autoria: 'Aldair',
-      modelo: 'modelo1'
-    },
-    {
-      conteudo: 'Conteudo 2',
-      autoria: 'Aldair',
-      modelo: 'modelo2'
-    },
-    {
-      conteudo: 'Conteudo 3',
-      autoria: 'Aldair',
-      modelo: 'modelo3'
-    }
+    // {
+    //   conteudo: 'Conteudo 1',
+    //   autoria: 'Aldair',
+    //   modelo: 'modelo1'
+    // },
+    // {
+    //   conteudo: 'Conteudo 2',
+    //   autoria: 'Aldair',
+    //   modelo: 'modelo2'
+    // },
+    // {
+    //   conteudo: 'Conteudo 3',
+    //   autoria: 'Aldair',
+    //   modelo: 'modelo3'
+    // }
   ]
 
 }

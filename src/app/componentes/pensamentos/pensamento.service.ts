@@ -8,31 +8,31 @@ import { Observable } from 'rxjs';
 })
 export class PensamentoService {
 
-  private readonly API = 'http://localhost:3000/pensamentos'
+  private readonly API_URL = 'https://my-thoughts-server.vercel.app/pensamento'
 
   constructor(private http: HttpClient) { }
 
   listar(): Observable<Pensamento[]> {
-    return this.http.get<Pensamento[]>(this.API)
+    return this.http.get<Pensamento[]>(this.API_URL)
   }
 
   criar(pensamento: Pensamento): Observable<Pensamento> {
-    return this.http.post<Pensamento>(this.API, pensamento)
+    return this.http.post<Pensamento>(this.API_URL, pensamento)
   }
 
   editar(pensamento: Pensamento): Observable<Pensamento> {
-    const url = `${this.API}/${pensamento.id}`
+    const url = `${this.API_URL}/${pensamento.id}`
     return this.http.put<Pensamento>(url, pensamento )
 
   }
 
-  excluir(id: number): Observable<Pensamento> {
-    const url = `${this.API}/${id}`
+  excluir(id: string): Observable<Pensamento> {
+    const url = `${this.API_URL}/${id}`
     return this.http.delete<Pensamento>(url)
   }
 
-  buscarPorId(id: number): Observable<Pensamento> {
-    const url = `${this.API}/${id}`
+  buscarPorId(id: string): Observable<Pensamento> {
+    const url = `${this.API_URL}/${id}`
     return this.http.get<Pensamento>(url)
   }
 

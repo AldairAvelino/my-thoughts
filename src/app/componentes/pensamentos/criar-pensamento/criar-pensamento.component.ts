@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Pensamento } from '../pensamento/pensamento';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -10,8 +11,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './criar-pensamento.component.css'
 })
 export class CriarPensamentoComponent {
-  pensamento = {
-    id: '1',
+  pensamento: Pensamento = {
+    id: 1,
     conteudo: 'teste conteudo',
     autoria: 'aldair',
     modelo: 'modelo3' //o botão de rádio com o value correspondente a 'modelo3' será inicialmente selecionado.

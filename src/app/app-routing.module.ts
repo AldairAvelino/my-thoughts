@@ -9,22 +9,27 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'listarPensamento',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    title: 'Principal'
   },
   {
     path: 'criarPensamento',
+    title: 'Adicionar Pensamento',
     component: CriarPensamentoComponent
   },
   {
     path: 'listarPensamento',
+    title: 'Listagens de Pensamento',
     component: ListarPensamentoComponent
   },
   {
     path: 'pensamentos/excluirPensamento/:id',
+    title: 'Eliminar Pensamento',
     component: ExcluirPensamentoComponent
   },
   {
     path: 'pensamentos/editarPensamento/:id',
+    title: 'Editar Pensamento',
     component: EditarPensamentoComponent
   }
 

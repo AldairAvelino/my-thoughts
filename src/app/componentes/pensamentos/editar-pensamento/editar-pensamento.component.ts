@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class EditarPensamentoComponent implements OnInit {
 
   pensamento: Pensamento = {
-    id: 0,
+    id: '',
     conteudo: '',
     autoria: '',
     modelo: ''
@@ -25,7 +25,7 @@ export class EditarPensamentoComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+    this.service.buscarPorId(id!).subscribe((pensamento) => {
       this.pensamento = pensamento
     })
   }

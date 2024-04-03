@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PensamentoService {
 
-  private readonly API_URL = 'https://my-thoughts-server.vercel.app/pensamento'
+  private readonly API_URL = 'https://my-thoughts-server.vercel.app/pensamentos'
 
   constructor(private http: HttpClient) { }
 
